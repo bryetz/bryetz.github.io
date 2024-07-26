@@ -42,7 +42,6 @@
             height: 150px;
             object-fit: cover;
             border-radius: 50%;
-            margin-top: 30px; /* Adjusted to move the image down further */
         }
         .company-logo, .education-logo {
             width: 56px;
@@ -65,27 +64,16 @@
             height: 100%;
         }
         .skills-section {
-            margin-bottom: 15px;
-        }
-        .row-equal-height {
+            height: 100%;
             display: flex;
-            flex-wrap: wrap;
+            align-items: stretch;
         }
-        .row-equal-height .col {
-            display: flex;
-            flex: 1 0 100%;
-            max-width: 100%;
+        .skills-card {
+            flex-grow: 1;
         }
-        @media (min-width: 576px) {
-            .row-equal-height .col-sm {
-                flex: 1 0 50%;
-                max-width: 50%;
-            }
-        }
-        @media (min-width: 768px) {
-            .row-equal-height .col-md {
-                flex: 1 0 33.3333%;
-                max-width: 33.3333%;
+        @media (max-width: 576px) {
+            .header-img {
+                margin-top: 0; /* Adjust the margin for smaller screens */
             }
         }
     </style>
@@ -327,34 +315,28 @@
 
         <section class="technical-skills">
             <h2 class="section-title">Technical Skills</h2>
-            <div class="row-equal-height">
+            <div class="row">
                 <div class="col-md-4">
-                    <div class="card mb-3">
+                    <div class="card skills-card mb-3">
                         <div class="card-body">
-                            <div class="skills-section">
-                                <h6 class="font-weight-bold">Programming Languages</h6>
-                                <p>Python | C++ | Java | JavaScript | SQL</p>
-                            </div>
+                            <h6 class="font-weight-bold">Programming Languages</h6>
+                            <p>Python | C++ | Java | JavaScript | SQL | HTML</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card mb-3">
+                    <div class="card skills-card mb-3">
                         <div class="card-body">
-                            <div class="skills-section">
-                                <h6 class="font-weight-bold">Frameworks & Libraries</h6>
-                                <p>PyTorch | Tensorflow | TensorRT-LLM | LangChain | AutoGen</p>
-                            </div>
+                            <h6 class="font-weight-bold">Frameworks & Libraries</h6>
+                            <p>PyTorch | Tensorflow | TensorRT-LLM | LangChain | AutoGen | Bootstrap</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card mb-3">
+                    <div class="card skills-card mb-3">
                         <div class="card-body">
-                            <div class="skills-section">
-                                <h6 class="font-weight-bold">Tools & Technologies</h6>
-                                <p>CUDA | Valgrind | Docker | Git | Linux | PostgreSQL | MongoDB</p>
-                            </div>
+                            <h6 class="font-weight-bold">Tools & Technologies</h6>
+                            <p>CUDA | Docker | Git | Linux | Valgrind | PostgreSQL | MongoDB</p>
                         </div>
                     </div>
                 </div>
