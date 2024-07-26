@@ -42,7 +42,7 @@
             height: 150px;
             object-fit: cover;
             border-radius: 50%;
-            margin-top: 30px; /* Adjusted to move the image down further */
+            margin-top: -30px; /* Adjusted to move the image down further */
         }
         .company-logo, .education-logo {
             width: 56px;
@@ -66,6 +66,24 @@
         }
         .skills-section {
             margin-bottom: 15px;
+        }
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .header-img {
+                margin-top: 0;
+                margin-bottom: 15px;
+            }
+            .contact {
+                flex-direction: column;
+                align-items: center;
+            }
+            .contact a {
+                margin: 5px 0;
+            }
         }
     </style>
 </head>
@@ -306,19 +324,35 @@
 
         <section class="technical-skills">
             <h2 class="section-title">Technical Skills</h2>
-            <div class="card mb-3">
-                <div class="card-body">
-                    <div class="skills-section">
-                        <h6 class="font-weight-bold">Programming Languages</h6>
-                        <p>Python | C++ | Java | JavaScript | SQL | HTML</p>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="skills-section">
+                                <h6 class="font-weight-bold">Programming Languages</h6>
+                                <p>Python | C++ | Java | JavaScript | SQL </p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="skills-section">
-                        <h6 class="font-weight-bold">Frameworks & Libraries</h6>
-                        <p>PyTorch | Tensorflow | TensorRT-LLM | LangChain | AutoGen | Bootstrap</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="skills-section">
+                                <h6 class="font-weight-bold">Frameworks & Libraries</h6>
+                                <p>PyTorch | Tensorflow | TensorRT-LLM | LangChain | AutoGen</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="skills-section">
-                        <h6 class="font-weight-bold">Tools & Technologies</h6>
-                        <p>CUDA | Docker | Git | Linux | Valgrind | PostgreSQL | MongoDB</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="skills-section">
+                                <h6 class="font-weight-bold">Tools & Technologies</h6>
+                                <p>CUDA | Valgrind | Docker | Git | Linux | PostgreSQL | MongoDB</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
