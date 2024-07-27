@@ -75,9 +75,31 @@
             flex-direction: column;
             justify-content: space-between;
         }
+        .resume-title {
+            font-size: 3.5rem;
+            font-weight: 300;
+            line-height: 1.2;
+        }
+        @media (min-width: 576px) and (max-width: 768px) {
+            .resume-title {
+                font-size: 3rem;
+                text-align: center;
+            }
+        }
         @media (max-width: 576px) {
             .header-img {
                 margin-top: 0; /* Adjust the margin for smaller screens */
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 30px;
+            }
+            .resume-title {
+                font-size: 2.5rem;
+                text-align: center;
+            }
+            .header-section {
+                width: 100%;
             }
         }
     </style>
@@ -85,8 +107,9 @@
 <body>
     <div class="container">
         <header class="d-flex justify-content-between align-items-center mb-4">
-            <div>
-                <h1 class="display-4">Bryan Etzine</h1>
+            <div class="header-section">
+                <img src="headshot.png" alt="Headshot of Bryan Etzine" class="header-img d-flex d-sm-none">
+                <h1 class="resume-title">Bryan Etzine</h1>
                 <div class="contact">
                     <a href="mailto:bryetz@gmail.com">bryetz@gmail.com</a>
                     <span>•</span>
@@ -95,7 +118,7 @@
                     <a href="https://www.linkedin.com/in/bryanetzine" target="_blank">LinkedIn</a>
                 </div>
             </div>
-            <img src="headshot.png" alt="Headshot of Bryan Etzine" class="header-img">
+            <img src="headshot.png" alt="Headshot of Bryan Etzine" class="header-img d-none d-sm-flex">
         </header>
 
         <section class="education">
