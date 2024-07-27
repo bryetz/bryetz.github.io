@@ -42,6 +42,7 @@
             height: 150px;
             object-fit: cover;
             border-radius: 50%;
+            margin-top: 30px; /* Adjusted to move the image down further */
         }
         .company-logo, .education-logo {
             width: 56px;
@@ -70,6 +71,9 @@
         }
         .skills-card {
             flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
         @media (max-width: 576px) {
             .header-img {
@@ -318,25 +322,25 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="card skills-card mb-3">
-                        <div class="card-body">
+                        <div class="card-body d-flex flex-column">
                             <h6 class="font-weight-bold">Programming Languages</h6>
-                            <p>Python | C++ | Java | JavaScript | SQL</p>
+                            <p class="flex-grow-1">Python | C++ | Java | JavaScript | SQL</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card skills-card mb-3">
-                        <div class="card-body">
+                        <div class="card-body d-flex flex-column">
                             <h6 class="font-weight-bold">Frameworks & Libraries</h6>
-                            <p>PyTorch | Tensorflow | TensorRT-LLM | LangChain | AutoGen/p>
+                            <p class="flex-grow-1">PyTorch | Tensorflow | TensorRT-LLM | LangChain | AutoGen</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card skills-card mb-3">
-                        <div class="card-body">
+                        <div class="card-body d-flex flex-column">
                             <h6 class="font-weight-bold">Tools & Technologies</h6>
-                            <p>CUDA | Valgrind | Docker | Git | Linux | PostgreSQL | MongoDB</p>
+                            <p class="flex-grow-1">CUDA | Valgrind | Docker | Git | Linux | PostgreSQL | MongoDB</p>
                         </div>
                     </div>
                 </div>
