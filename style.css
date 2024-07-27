@@ -35,12 +35,15 @@ body {
     color: #333;
 }
 
+.resume-header {
+    margin-top: 30px;
+}
+
 .header-img {
     width: 150px;
     height: 150px;
     object-fit: cover;
     border-radius: 50%;
-    margin-top: 30px; 
 }
 
 .company-logo, .education-logo {
@@ -95,8 +98,11 @@ h1, h2, h5, h6 {
 }
 
 @media (max-width: 576px) {
+    .resume-header {
+        margin-top: 30px;
+    }
+
     .header-img {
-        margin-top: 0; /* Adjust the margin for smaller screens */
         display: block;
         margin-left: auto;
         margin-right: auto;
