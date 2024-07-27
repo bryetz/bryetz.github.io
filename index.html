@@ -6,109 +6,13 @@
     <title>Bryan Etzine</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            background-color: #f8f9fa;
-            font-family: 'Roboto', sans-serif;
-        }
-        .container {
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
-        .section-title {
-            margin-top: 40px;
-            margin-bottom: 20px;
-            font-family: 'Merriweather', serif;
-        }
-        .contact {
-            margin-top: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .contact a {
-            margin: 0 10px;
-            color: #007bff;
-            text-decoration: none;
-        }
-        .contact a:hover {
-            text-decoration: underline;
-        }
-        .contact span {
-            color: #333;
-        }
-        .header-img {
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 50%;
-            margin-top: 30px; /* Adjusted to move the image down further */
-        }
-        .company-logo, .education-logo {
-            width: 56px;
-            height: 56px;
-            object-fit: contain;
-            margin-right: 10px;
-            vertical-align: top;
-        }
-        h1, h2, h5, h6 {
-            font-family: 'Merriweather', serif;
-        }
-        .project-link, .certification-link {
-            color: #007bff;
-            text-decoration: none;
-        }
-        .project-link:hover, .certification-link:hover {
-            text-decoration: underline;
-        }
-        .certification-card {
-            height: 100%;
-        }
-        .skills-section {
-            height: 100%;
-            display: flex;
-            align-items: stretch;
-        }
-        .skills-card {
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        .resume-title {
-            font-size: 3.5rem;
-            font-weight: 300;
-            line-height: 1.2;
-        }
-        @media (min-width: 576px) and (max-width: 768px) {
-            .resume-title {
-                font-size: 3rem;
-                text-align: center;
-            }
-        }
-        @media (max-width: 576px) {
-            .header-img {
-                margin-top: 0; /* Adjust the margin for smaller screens */
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-                margin-bottom: 30px;
-            }
-            .resume-title {
-                font-size: 2.5rem;
-                text-align: center;
-            }
-            .header-section {
-                width: 100%;
-            }
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
     <div class="container">
         <header class="d-flex justify-content-between align-items-center mb-4">
             <div class="header-section">
-                <img src="headshot.png" alt="Headshot of Bryan Etzine" class="header-img d-flex d-sm-none">
+                <img src="img/headshot.png" alt="Headshot of Bryan Etzine" class="header-img d-flex d-sm-none">
                 <h1 class="resume-title">Bryan Etzine</h1>
                 <div class="contact">
                     <a href="mailto:bryetz@gmail.com">bryetz@gmail.com</a>
@@ -118,7 +22,7 @@
                     <a href="https://www.linkedin.com/in/bryanetzine" target="_blank">LinkedIn</a>
                 </div>
             </div>
-            <img src="headshot.png" alt="Headshot of Bryan Etzine" class="header-img d-none d-sm-flex">
+            <img src="img/headshot.png" alt="Headshot of Bryan Etzine" class="header-img d-none d-sm-flex">
         </header>
 
         <section class="education">
@@ -127,11 +31,13 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-auto">
-                            <img src="uflorida_logo.jpg" alt="University of Florida Logo" class="education-logo">
+                            <img src="img/uflorida_logo.jpg" alt="University of Florida Logo" class="education-logo">
                         </div>
                         <div class="col">
-                            <h6 class="text-right float-sm-right font-italic">Expected May 2025</h6>
-                            <h5 class="card-title">University of Florida</h5>
+                            <div class="d-flex flex-wrap justify-content-between">
+                                <h5 class="card-title">University of Florida</h5>
+                                <h6 class="text-right font-italic">Expected May 2025</h6>
+                            </div>
                             <p class="card-text"><strong>Master of Science in Computer Science</strong> | Concentration: Deep Learning | GPA: 3.75</p>
                             <p>Coursework: Advanced Data Structures, Analysis of Algorithms, Distributed Operating Systems, Cryptology</p>
                         </div>
@@ -142,11 +48,13 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-auto">
-                            <img src="uflorida_logo.jpg" alt="University of Florida Logo" class="education-logo">
+                            <img src="img/uflorida_logo.jpg" alt="University of Florida Logo" class="education-logo">
                         </div>
                         <div class="col">
-                            <h6 class="text-right float-sm-right font-italic">Class of 2024</h6>
-                            <h5 class="card-title">University of Florida</h5>
+                            <div class="d-block d-sm-flex flex-wrap justify-content-between">
+                                <h5 class="card-title">University of Florida</h5>
+                                <h6 class="text-sm-right font-italic">Class of 2024</h6>
+                            </div>
                             <p class="card-text"><strong>Bachelor of Science in Computer Science</strong> | Minor: Economics | GPA: 3.72</p>
                             <p>Coursework: Natural Language Processing, Machine Learning Fundamentals, Linear Algebra, AI Fundamentals, Operating Systems, Data Structures and Algorithms, Computer Network Fundamentals, Computer Organization</p>
                             <p>Certificates: Artificial Intelligence Fundamentals and Applications</p>
@@ -164,11 +72,13 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-auto">
-                            <img src="servicenow_logo.jpg" alt="ServiceNow Logo" class="company-logo">
+                            <img src="img/servicenow_logo.jpg" alt="ServiceNow Logo" class="company-logo">
                         </div>
                         <div class="col">
-                            <h6 class="text-right float-sm-right font-italic">May&ndash;August 2024</h6>
-                            <h5 class="card-title">Machine Learning Engineer Intern</h5>
+                            <div class="d-flex flex-wrap justify-content-between">
+                                <h5 class="card-title">Machine Learning Engineer Intern</h5>
+                                <h6 class="text-right font-italic">May&ndash;August 2024</h6>
+                            </div>
                             <p class="card-text"><strong>ServiceNow</strong> | Santa Clara, CA | Python, PyTorch, & Docker</p>
                             <ul>
                                 <li>Worked on the Core LLM team fine-tuning models with Fully Sharded Data Parallel on NVIDIA GPU cloud.</li>
@@ -184,11 +94,13 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-auto">
-                            <img src="UF Research.jpg" alt="UF Logo" class="company-logo">
+                            <img src="img/uf_research.jpg" alt="UF Logo" class="company-logo">
                         </div>
                         <div class="col">
-                            <h6 class="text-right float-sm-right font-italic">December 2023</h6>
-                            <h5 class="card-title">Machine Learning Research Assistant</h5>
+                            <div class="d-flex flex-wrap justify-content-between">
+                                <h5 class="card-title">Machine Learning Research Assistant</h5>
+                                <h6 class="text-right font-italic">December 2023</h6>
+                            </div>
                             <p class="card-text"><strong>Machine Learning and Sensing Lab</strong> | Gainesville, FL | Python & PyTorch</p>
                             <ul>
                                 <li>Labeled 2,000 fast Fourier transformed fish sound spectrograms, offering insights into coral reef aquatic life.</li>
@@ -203,11 +115,13 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-auto">
-                            <img src="scaleai_logo.jpg" alt="Scale AI Logo" class="company-logo">
+                            <img src="img/scaleai_logo.jpg" alt="Scale AI Logo" class="company-logo">
                         </div>
                         <div class="col">
-                            <h6 class="text-right float-sm-right font-italic">September&ndash;December 2023</h6>
-                            <h5 class="card-title">Software Engineer for AI Training Data</h5>
+                            <div class="d-flex flex-wrap justify-content-between">
+                                <h5 class="card-title">Software Engineer for AI Training Data</h5>
+                                <h6 class="text-right font-italic">September&ndash;December 2023</h6>
+                            </div>
                             <p class="card-text"><strong>Scale AI</strong> | Remote | C++</p>
                             <ul>
                                 <li>Created prompt-answer pairs of programming tasks in C++ to fine-tune LLMs for optimal performance.</li>
@@ -222,11 +136,13 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-auto">
-                            <img src="servicenow_logo.jpg" alt="ServiceNow Logo" class="company-logo">
+                            <img src="img/servicenow_logo.jpg" alt="ServiceNow Logo" class="company-logo">
                         </div>
                         <div class="col">
-                            <h6 class="text-right float-sm-right font-italic">May&ndash;August 2023</h6>
-                            <h5 class="card-title">Platform Software Engineer Intern</h5>
+                            <div class="d-flex flex-wrap justify-content-between">
+                                <h5 class="card-title">Platform Software Engineer Intern</h5>
+                                <h6 class="text-right font-italic">May&ndash;August 2023</h6>
+                            </div>
                             <p class="card-text"><strong>ServiceNow</strong> | Santa Clara, CA | Java & JavaScript</p>
                             <ul>
                                 <li>Resolved server timing issues by debugging race conditions across distributed nodes in a cluster.</li>
@@ -242,11 +158,13 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-auto">
-                            <img src="servicenow_logo.jpg" alt="ServiceNow Logo" class="company-logo">
+                            <img src="img/servicenow_logo.jpg" alt="ServiceNow Logo" class="company-logo">
                         </div>
                         <div class="col">
-                            <h6 class="text-right float-sm-right font-italic">May&ndash;August 2022</h6>
-                            <h5 class="card-title">Platform Software Engineer Intern</h5>
+                            <div class="d-flex flex-wrap justify-content-between">
+                                <h5 class="card-title">Platform Software Engineer Intern</h5>
+                                <h6 class="text-right font-italic">May&ndash;August 2022</h6>
+                            </div>
                             <p class="card-text"><strong>ServiceNow</strong> | Santa Clara, CA | Java & JavaScript</p>
                             <ul>
                                 <li>Implemented REST APIs for a HTTP client (95% unit test coverage) to manage multiple client connections.</li>
@@ -263,79 +181,68 @@
 
             <div class="card mb-3">
                 <div class="card-body">
-                    <div class="row">
-                        <div class="col">
-                            <h6 class="text-right float-sm-right font-italic">Spring 2024</h6>
-                            <h5 class="card-title"><a href="https://github.com/bryetz/Agenerative" target="_blank" class="project-link">Agenerative</a></h5>
-                            <p class="card-text"><strong>Retrieval-Augmented Generation Agents</strong> | Python, TensorRT-LLM, AutoGen, Flask</p>
-                            <ul>
-                                <li>Engineered desktop app to run optimized local LLMs that learn with self-reflection in an agentic workflow.</li>
-                                <li>Dynamically searched embeddings of documents with LlamaIndex and Facebook AI Similarity Search.</li>
-                            </ul>
-                        </div>
+                    <div class="d-flex justify-content-between">
+                        <h5 class="card-title"><a href="https://github.com/bryetz/Agenerative" target="_blank" class="project-link">Agenerative</a></h5>
+                        <h6 class="text-right font-italic">Spring 2024</h6>
                     </div>
+                    <p class="card-text"><strong>Retrieval-Augmented Generation Agents</strong> | Python, TensorRT-LLM, AutoGen, Flask</p>
+                    <ul>
+                        <li>Engineered desktop app to run optimized local LLMs that learn with self-reflection in an agentic workflow.</li>
+                        <li>Dynamically searched embeddings of documents with LlamaIndex and Facebook AI Similarity Search.</li>
+                    </ul>
                 </div>
             </div>
 
             <div class="card mb-3">
                 <div class="card-body">
-                    <div class="row">
-                        <div class="col">
-                            <h6 class="text-right float-sm-right font-italic">Summer 2023</h6>
-                            <h5 class="card-title"><a href="https://www.youtube.com/watch?v=FR8M_6-_ie0&ab_channel=RishavMitra" target="_blank" class="project-link">Scribe</a></h5>
-                            <p class="card-text"><strong>ServiceNow 1st Place Hackathon Project</strong> | Java & JavaScript</p>
-                            <ul>
-                                <li>Won 1st in intern hackathon in a team of 5 for enabling generative AI and autocomplete in server-side scripting.</li>
-                                <li>Cut script development time by 50% after integrating project in production.</li>
-                            </ul>
-                        </div>
+                    <div class="d-flex justify-content-between">
+                        <h5 class="card-title"><a href="https://www.youtube.com/watch?v=FR8M_6-_ie0&ab_channel=RishavMitra" target="_blank" class="project-link">Scribe</a></h5>
+                        <h6 class="text-right font-italic">Summer 2023</h6>
                     </div>
+                    <p class="card-text"><strong>ServiceNow 1st Place Hackathon Project</strong> | Java & JavaScript</p>
+                    <ul>
+                        <li>Won 1st in intern hackathon in a team of 5 for enabling generative AI and autocomplete in server-side scripting.</li>
+                        <li>Cut script development time by 50% after integrating project in production.</li>
+                    </ul>
                 </div>
             </div>
 
             <div class="card mb-3">
                 <div class="card-body">
-                    <div class="row">
-                        <div class="col">
-                            <h6 class="text-right float-sm-right font-italic">Summer 2023</h6>
-                            <h5 class="card-title"><a href="https://github.com/bryetz/BrandVision" target="_blank" class="project-link">Brand Vision</a></h5>
-                            <p class="card-text"><strong>Brand Logo Image Classification Model</strong> | Python & Tensorflow</p>
-                            <ul>
-                                <li>Achieved 95% test-set accuracy in classifying 10 brand logos by employing transfer learning with ResNet-50.</li>
-                                <li>Trained image classification model on three NVIDIA A100 GPUs via UF’s HiPerGator AI supercomputer.</li>
-                            </ul>
-                        </div>
+                    <div class="d-flex justify-content-between">
+                        <h5 class="card-title"><a href="https://github.com/bryetz/BrandVision" target="_blank" class="project-link">Brand Vision</a></h5>
+                        <h6 class="text-right float-sm-right font-italic">Summer 2023</h6>
                     </div>
+                    <p class="card-text"><strong>Brand Logo Image Classification Model</strong> | Python & Tensorflow</p>
+                    <ul>
+                        <li>Achieved 95% test-set accuracy in classifying 10 brand logos by employing transfer learning with ResNet-50.</li>
+                        <li>Trained image classification model on three NVIDIA A100 GPUs via UF’s HiPerGator AI supercomputer.</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
         <section class="certifications">
             <h2 class="section-title">Certifications</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card certification-card mb-3">
-                        <div class="card-body">
-                            <h5 class="card-title"><a href="https://learn.nvidia.com/certificates?id=nc4v_E0TRB6-mYcuyFCqIw" target="_blank" class="certification-link">Data Parallelism: How to Train Deep Learning Models on Multiple GPUs</a></h5>
-                            <p class="card-text font-italic">Issued April 2024 by the NVIDIA Deep Learning Institute</p>
-                        </div>
-                    </div>
+
+            <div class="card certification-card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title"><a href="https://learn.nvidia.com/certificates?id=nc4v_E0TRB6-mYcuyFCqIw" target="_blank" class="certification-link">Data Parallelism: How to Train Deep Learning Models on Multiple GPUs</a></h5>
+                    <p class="card-text font-italic">Issued April 2024 by the NVIDIA Deep Learning Institute</p>
                 </div>
-                <div class="col-md-4">
-                    <div class="card certification-card mb-3">
-                        <div class="card-body">
-                            <h5 class="card-title"><a href="https://www.credly.com/badges/a24d31e8-4629-491d-87ec-b49f3933c530/linked_in?t=sapypz" target="_blank" class="certification-link">NVIDIA-Certified Associate: Generative AI and LLMs</a></h5>
-                            <p class="card-text font-italic">Issued March 2024 by NVIDIA via Credly</p>
-                        </div>
-                    </div>
+            </div>
+
+            <div class="card certification-card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title"><a href="https://www.credly.com/badges/a24d31e8-4629-491d-87ec-b49f3933c530/linked_in?t=sapypz" target="_blank" class="certification-link">NVIDIA-Certified Associate: Generative AI and LLMs</a></h5>
+                    <p class="card-text font-italic">Issued March 2024 by NVIDIA via Credly</p>
                 </div>
-                <div class="col-md-4">
-                    <div class="card certification-card mb-3">
-                        <div class="card-body">
-                            <h5 class="card-title"><a href="https://courses.nvidia.com/certificates/d957c494f83d47ed94f52eb2f25465a0/" target="_blank" class="certification-link">Fundamentals of Deep Learning</a></h5>
-                            <p class="card-text font-italic">Issued February 2024 by the NVIDIA Deep Learning Institute</p>
-                        </div>
-                    </div>
+            </div>
+
+            <div class="card certification-card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title"><a href="https://courses.nvidia.com/certificates/d957c494f83d47ed94f52eb2f25465a0/" target="_blank" class="certification-link">Fundamentals of Deep Learning</a></h5>
+                    <p class="card-text font-italic">Issued February 2024 by the NVIDIA Deep Learning Institute</p>
                 </div>
             </div>
         </section>
